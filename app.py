@@ -19,7 +19,6 @@ st.set_page_config(
 # Custom SVG flat-shaded 3D graphics
 HERO_SVG = """
 <svg viewBox="0 0 400 280" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-  <!-- Grid background lines -->
   <path d="M 50 180 L 200 105 L 350 180 L 200 255 Z" fill="none" stroke="#F4F4F5" stroke-width="1.5" />
   <path d="M 80 165 L 200 105 L 320 165" fill="none" stroke="#F4F4F5" stroke-width="1.5" />
   <path d="M 110 150 L 200 105 L 290 150" fill="none" stroke="#F4F4F5" stroke-width="1.5" />
@@ -29,21 +28,16 @@ HERO_SVG = """
   <path d="M 50 180 L 200 255" fill="none" stroke="#E4E4E7" stroke-dasharray="2 2" stroke-width="1" />
   <path d="M 350 180 L 200 255" fill="none" stroke="#E4E4E7" stroke-dasharray="2 2" stroke-width="1" />
 
-  <!-- Base Platform -->
   <polygon points="200,160 300,210 200,260 100,210" fill="#FAFAFA" stroke="#E4E4E7" stroke-width="1" />
   <polygon points="100,210 200,260 200,268 100,218" fill="#F4F4F5" stroke="#E4E4E7" stroke-width="1" />
   <polygon points="200,260 300,210 300,218 200,268" fill="#E4E4E7" stroke="#E4E4E7" stroke-width="1" />
 
-  <!-- 3D Stack of Documents -->
-  <!-- Document 3 (Bottom) -->
   <polygon points="140,175 190,200 160,215 110,190" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
   <polygon points="110,190 160,215 160,218 110,193" fill="#CBD5E1" stroke="#CBD5E1" stroke-width="1" />
   <polygon points="160,215 190,200 190,203 160,218" fill="#94A3B8" stroke="#CBD5E1" stroke-width="1" />
-  <!-- Document 2 (Middle) -->
   <polygon points="135,168 185,193 155,208 105,183" fill="#C7D2FE" stroke="#A5B4FC" stroke-width="1" />
   <polygon points="105,183 155,208 155,211 105,186" fill="#A5B4FC" stroke="#A5B4FC" stroke-width="1" />
   <polygon points="155,208 185,193 185,196 155,211" fill="#818CF8" stroke="#A5B4FC" stroke-width="1" />
-  <!-- Document 1 (Top) -->
   <polygon points="130,160 180,185 150,200 100,175" fill="#FFFFFF" stroke="#E4E4E7" stroke-width="1" />
   <polygon points="100,175 150,200 150,203 100,178" fill="#E4E4E7" stroke="#E4E4E7" stroke-width="1" />
   <polygon points="150,200 180,185 180,188 150,203" fill="#D4D4D8" stroke="#E4E4E7" stroke-width="1" />
@@ -51,11 +45,9 @@ HERO_SVG = """
   <line x1="125" y1="180" x2="155" y2="195" stroke="#A1A1AA" stroke-width="1.5" />
   <line x1="130" y1="188" x2="150" y2="198" stroke="#A1A1AA" stroke-width="1.5" />
 
-  <!-- Dotted lines indicating learning/reading -->
   <path d="M 140 170 Q 200 130 200 90" fill="none" stroke="#4F46E5" stroke-width="1.5" stroke-dasharray="3 3" />
   <path d="M 270 170 Q 200 130 200 90" fill="none" stroke="#4F46E5" stroke-width="1.5" stroke-dasharray="3 3" />
 
-  <!-- Floating 3D Octahedron AI Core -->
   <polygon points="200,40 170,80 200,95" fill="#C7D2FE" stroke="#818CF8" stroke-width="0.5" />
   <polygon points="200,40 200,95 230,80" fill="#818CF8" stroke="#4F46E5" stroke-width="0.5" />
   <polygon points="200,40 170,80 200,65" fill="#E0E7FF" opacity="0.6" />
@@ -63,88 +55,14 @@ HERO_SVG = """
   <polygon points="200,115 170,80 200,95" fill="#818CF8" stroke="#4F46E5" stroke-width="0.5" />
   <polygon points="200,115 200,95 230,80" fill="#4F46E5" stroke="#4F46E5" stroke-width="0.5" />
 
-  <!-- Floating Rings / Halo around Core -->
   <ellipse cx="200" cy="80" rx="45" ry="22" fill="none" stroke="#18181B" stroke-width="1" stroke-dasharray="6 4" transform="rotate(-5, 200, 80)" />
   <ellipse cx="200" cy="80" rx="55" ry="27" fill="none" stroke="#4F46E5" stroke-width="0.8" stroke-dasharray="20 15" />
 
-  <!-- Database Cylinder -->
   <ellipse cx="260" cy="170" rx="20" ry="10" fill="#F4F4F5" stroke="#D4D4D8" stroke-width="1" />
   <path d="M 240 170 L 240 195 A 20 10 0 0 0 280 195 L 280 170 Z" fill="#E4E4E7" stroke="#D4D4D8" stroke-width="1" />
   <path d="M 240 182 A 20 10 0 0 0 280 182" fill="none" stroke="#D4D4D8" stroke-width="1" />
   <path d="M 260 170 L 260 205" fill="none" stroke="#D4D4D8" stroke-width="1" opacity="0.4" />
   <ellipse cx="260" cy="195" rx="20" ry="10" fill="none" stroke="#D4D4D8" stroke-width="1" />
-</svg>
-"""
-
-FEAT1_SVG = """
-<svg viewBox="0 0 160 120" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-  <!-- Isometric Grid Base -->
-  <polygon points="80,25 130,50 80,75 30,50" fill="#FAFAFA" stroke="#E4E4E7" stroke-width="1" />
-  <line x1="55" y1="37.5" x2="105" y2="62.5" stroke="#F4F4F5" stroke-width="1" />
-  <line x1="67.5" y1="43.75" x2="117.5" y2="68.75" stroke="#F4F4F5" stroke-width="1" />
-  <line x1="105" y1="37.5" x2="55" y2="62.5" stroke="#F4F4F5" stroke-width="1" />
-  <line x1="92.5" y1="43.75" x2="42.5" y2="68.75" stroke="#F4F4F5" stroke-width="1" />
-  <polygon points="80,50 92.5,56.25 80,62.5 67.5,56.25" fill="#E0E7FF" stroke="#818CF8" stroke-width="1" />
-
-  <!-- 3D Magnifying Glass -->
-  <polygon points="45,85 50,82 65,95 60,98" fill="#818CF8" stroke="#4F46E5" stroke-width="1" />
-  <polygon points="45,85 60,98 60,101 45,88" fill="#4F46E5" stroke="#4F46E5" stroke-width="1" />
-  <ellipse cx="75" cy="70" rx="16" ry="10" fill="none" stroke="#4F46E5" stroke-width="2.5" />
-  <ellipse cx="75" cy="70" rx="16" ry="10" fill="#C7D2FE" opacity="0.3" />
-  <line x1="75" y1="70" x2="80" y2="56.25" stroke="#4F46E5" stroke-width="1" stroke-dasharray="2 2" />
-</svg>
-"""
-
-FEAT2_SVG = """
-<svg viewBox="0 0 160 120" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-  <!-- Notebook Cover -->
-  <polygon points="75,25 125,50 85,78 35,53" fill="#E4E4E7" stroke="#D4D4D8" stroke-width="1" />
-  <polygon points="35,53 85,78 85,82 35,57" fill="#D4D4D8" stroke="#D4D4D8" stroke-width="1" />
-  <polygon points="85,78 125,50 125,54 85,82" fill="#A1A1AA" stroke="#D4D4D8" stroke-width="1" />
-
-  <!-- Notebook Pages -->
-  <polygon points="75,22 122,46 82,74 35,50" fill="#FFFFFF" stroke="#E4E4E7" stroke-width="1" />
-  <polygon points="35,50 82,74 82,77 35,53" fill="#E4E4E7" stroke="#E4E4E7" stroke-width="1" />
-  <polygon points="73,19 115,40 78,66 36,45" fill="#FAFAFA" stroke="#4F46E5" stroke-width="1" />
-  
-  <!-- Spiral bindings -->
-  <path d="M 40,43 Q 38,39 42,37 Q 46,35 44,39" fill="none" stroke="#18181B" stroke-width="1.5" />
-  <path d="M 50,49 Q 48,45 52,43 Q 56,41 54,45" fill="none" stroke="#18181B" stroke-width="1.5" />
-  <path d="M 60,55 Q 58,51 62,49 Q 66,47 64,51" fill="none" stroke="#18181B" stroke-width="1.5" />
-  <path d="M 70,61 Q 68,57 72,55 Q 76,53 74,57" fill="none" stroke="#18181B" stroke-width="1.5" />
-
-  <!-- Page Lines -->
-  <line x1="55" y1="48" x2="85" y2="63" stroke="#A5B4FC" stroke-width="1" />
-  <line x1="60" y1="53" x2="90" y2="68" stroke="#A5B4FC" stroke-width="1" />
-  <line x1="65" y1="58" x2="95" y2="73" stroke="#A5B4FC" stroke-width="1" />
-</svg>
-"""
-
-FEAT3_SVG = """
-<svg viewBox="0 0 160 120" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-  <!-- Clipboard Backing -->
-  <polygon points="80,20 125,42 85,78 40,56" fill="#F4F4F5" stroke="#E4E4E7" stroke-width="1" />
-  <polygon points="40,56 85,78 85,83 40,61" fill="#E4E4E7" stroke="#E4E4E7" stroke-width="1" />
-  <polygon points="85,78 125,42 125,47 85,83" fill="#D4D4D8" stroke="#E4E4E7" stroke-width="1" />
-
-  <!-- Sheet of Paper -->
-  <polygon points="78,24 118,44 80,74 44,54" fill="#FFFFFF" stroke="#E4E4E7" stroke-width="1" />
-
-  <!-- 3D Clip at Top -->
-  <polygon points="72,23 83,28 78,32 67,27" fill="#94A3B8" stroke="#64748B" stroke-width="1" />
-  <polygon points="67,27 78,32 78,34 67,29" fill="#64748B" stroke="#64748B" stroke-width="1" />
-
-  <!-- Quiz Questions -->
-  <line x1="60" y1="42" x2="95" y2="59.5" stroke="#71717A" stroke-width="1.2" />
-  <polygon points="50,42 55,44.5 52,47 47,44.5" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1" />
-  <polyline points="49,44 50,45 53,42" fill="none" stroke="#4F46E5" stroke-width="1" />
-
-  <line x1="66" y1="51" x2="101" y2="68.5" stroke="#71717A" stroke-width="1.2" />
-  <polygon points="56,51 61,53.5 58,56 53,53.5" fill="#FFFFFF" stroke="#E4E4E7" stroke-width="1" />
-
-  <line x1="72" y1="60" x2="97" y2="72.5" stroke="#71717A" stroke-width="1.2" />
-  <polygon points="62,60 67,62.5 64,65 59,62.5" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1" />
-  <polyline points="61,62 62,63 65,60" fill="none" stroke="#4F46E5" stroke-width="1" />
 </svg>
 """
 
@@ -290,6 +208,20 @@ st.markdown("""
         border-color: #3F3F46 !important;
     }
 
+    /* ─── NEW CSS: FORCE ALL TEXT INPUTS TO WHITE BACKGROUND ─── */
+    /* Target YouTube URL box and general inputs */
+    div[data-testid="stTextInput"] [data-baseweb="input"],
+    div[data-testid="stTextInput"] [data-baseweb="base-input"] {
+        background-color: #FFFFFF !important;
+        border: 1px solid #E4E4E7 !important;
+        border-radius: 6px !important;
+    }
+    div[data-testid="stTextInput"] input {
+        background-color: #FFFFFF !important;
+        color: #18181B !important;
+        -webkit-text-fill-color: #18181B !important; /* Prevents text from staying white */
+    }
+
     /* Form input capsule styled like ChatGPT */
     div[data-testid="stForm"] {
         border: 1px solid #E4E4E7 !important;
@@ -313,13 +245,16 @@ st.markdown("""
         align-items: center !important;
         gap: 12px !important;
     }
+    
+    /* ─── NEW CSS: FORCE CHAT INPUT TO WHITE BACKGROUND ─── */
     div[data-testid="stForm"] input {
         border: none !important;
         box-shadow: none !important;
         padding: 8px 0px !important;
-        background-color: transparent !important;
+        background-color: #FFFFFF !important; /* Changed from transparent */
         font-size: 0.95rem !important;
         color: #18181B !important;
+        -webkit-text-fill-color: #18181B !important;
     }
     div[data-testid="stForm"] input:focus,
     div[data-testid="stForm"] input:active,
@@ -328,8 +263,9 @@ st.markdown("""
         outline: none !important;
         border: none !important;
         border-color: transparent !important;
+        background-color: #FFFFFF !important;
     }
-    /* Remove red border Streamlit adds to focused inputs */
+    /* Remove red border Streamlit adds to focused inputs and force white background */
     div[data-testid="stForm"] [data-baseweb="input"]:focus-within,
     div[data-testid="stForm"] [data-baseweb="input"] input:focus,
     div[data-testid="stForm"] div[class*="stTextInput"] input,
@@ -338,11 +274,13 @@ st.markdown("""
         border-color: transparent !important;
         box-shadow: none !important;
         outline: none !important;
+        background-color: #FFFFFF !important;
     }
     /* BaseWeb Input container focus ring override */
-    div[data-testid="stForm"] [data-baseweb="input"] {
+    div[data-testid="stForm"] [data-baseweb="input"],
+    div[data-testid="stForm"] [data-baseweb="base-input"] {
         border: none !important;
-        background-color: transparent !important;
+        background-color: #FFFFFF !important; /* Ensure wrapper stays white */
         box-shadow: none !important;
     }
     div[data-testid="stForm"] button {
@@ -706,4 +644,4 @@ with quiz_tab:
     if st.session_state.quiz:
         with st.container(border=True):
             st.markdown(st.session_state.quiz)
-        st.download_button("Download Quiz (.txt)", st.session_state.quiz, "quiz.txt")
+        st.download_button("Download Quiz (.txt)", st.session_state.quiz, "quiz.txt")
